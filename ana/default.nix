@@ -7,6 +7,7 @@
     ./kitty.nix
     ./polybar.nix
     ./rofi/rofi.nix
+    ./xdg-dirs.nix
     ./zsh.nix
   ];
 }
