@@ -6,6 +6,7 @@
 
   environment.systemPackages = with pkgs; [
     bash
+    file
     git
     killall
     tree

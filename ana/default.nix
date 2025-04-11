@@ -3,6 +3,7 @@
     ./home-manager.nix
 
     ./bspwm/bspwm.nix
+    ./flameshot.nix
     ./git.nix
     ./kitty.nix
     ./polybar.nix

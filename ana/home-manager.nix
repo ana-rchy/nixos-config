@@ -1,8 +1,6 @@
 { pkgs, config, home-manager, ... }:
 
 {
-  services.flameshot.enable = true;
-
   programs.feh.enable = true;
   programs.gh.enable = true;
   programs.kitty.enable = true;
