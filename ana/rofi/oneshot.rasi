@@ -1,0 +1,138 @@
+*{
+    transparent:      rgba(0,0,0,0%);
+    off-white:        #fbf6fc;
+
+    red-pink:         #ff005c;
+    dark-red-pink:    rgba(48,17,28,70%);
+    darker-red-pink:  rgba(37,6,17,90%);
+
+    orange:           #f8922d;
+    darker-orange:    #ea8700;
+
+    pastel-yellow:    #f3e54b;
+    lighter-yellow:   #ffd636;
+    yellow:           #ffd52e;
+    darker-yellow:    #fac528;
+
+    teal-green:       #77ea86;
+
+    cyan:             #64fcff;
+
+
+    background-color: @transparent;
+    transparency: "real";
+}
+
+element {
+    border:           0;
+    padding:          2px 5px 0;
+    children:         [ element-icon, element-text ];
+}
+element-text {
+    background-color: inherit;
+    text-color:       inherit;
+}
+element-icon {
+    margin: 0 20px 0 2px;
+    vertical-align: 0.4; /* more centered-looking */
+    size: 20px;
+}
+
+
+element.normal.normal {
+    background-color: @transparent;
+    text-color:       @off-white;
+}
+element.normal.active {
+    background-color: @transparent;
+    text-color:       @cyan;
+}
+element.normal.urgent {
+    background-color: @transparent;
+    text-color:       @red-pink;
+}
+element.alternate.normal {
+    background-color: @transparent;
+    text-color:       @off-white;
+}
+element.alternate.active {
+    background-color: @transparent;
+    text-color:       @cyan;
+}
+element.alternate.urgent {
+    background-color: @transparent;
+    text-color:       @red-pink;
+}
+
+
+element.selected.normal {
+    background-color: @dark-red-pink;
+    text-color:       @darker-orange;
+    border:           2;
+    border-color:     @darker-yellow;
+}
+element.selected.active {
+    background-color: @dark-red-pink;
+    text-color:       @teal-green;
+    border:           2;
+    border-color:     @darker-yellow;
+}
+element.selected.urgent {
+    background-color: @dark-red-pink;
+    text-color:       @teal-green;
+}
+
+
+window {
+    width: 50%;
+    height: 40%;
+    background-color: @darker-red-pink;
+    border-color:     @orange;
+    border:           2;
+    border-radius:    8;
+}
+mainbox {
+    border-color:     @lighter-yellow;
+    border:           3;
+    border-radius:    5;
+    padding:          5;
+}
+
+
+listview {
+    border-color:     @yellow;
+    border:           2px dash 0 0;
+    scrollbar:        true;
+    spacing:          2px;
+    padding:          2px 0 0;
+}
+
+scrollbar {
+    background-color: @transparent;
+    handle-color:     @pastel-yellow;
+    handle-width:     5px;
+}
+
+inputbar {
+    spacing:          0;
+    text-color:       @pastel-yellow;
+    padding:          1;
+    children:         [prompt,textbox-prompt-colon,entry];
+}
+
+prompt {
+    margin: 0 0 0 6px;
+    text-color:       @pastel-yellow;
+}
+
+textbox-prompt-colon {
+    expand:           false;
+    str:              ":";
+    margin:           0 4.8px 0 0;
+    text-color:       @pastel-yellow;
+}
+
+entry {
+    spacing:          0;
+    text-color:       @pastel-yellow;
+}

@@ -1,0 +1,112 @@
+format = """
+[](#403bae)\
+$username\
+[](bg:#8b2ba8 fg:#403bae)\
+$directory\
+[](fg:#8b2ba8 bg:#bf0196)\
+$git_branch\
+$git_status\
+[](fg:#bf0196 bg:#e6007c)\
+$c\
+$dotnet\
+$elixir\
+$elm\
+$golang\
+$haskell\
+$java\
+$julia\
+$nodejs\
+$nim\
+$rust\
+[](fg:#e6007c bg:#ff005c)\
+$time\
+[ ](fg:#ff005c)\
+"""
+
+# Disable the blank line at the start of the prompt
+add_newline = true
+
+# You can also replace your username with a neat symbol like  to save some space
+[username]
+show_always = true
+style_user = "bg:#403bae"
+style_root = "bg:#403bae"
+format = '[$user ]($style bold)'
+
+[directory]
+style = "bg:#8b2ba8 bold"
+format = "[ $path/ ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+
+
+[c]
+symbol = " "
+style = "bg:#e6007c bold"
+format = '[[ $symbol ($version) ](bg:#e6007c bold)]($style)'
+
+[dotnet]
+symbol = " "
+style = "bg:#e6007c bold"
+format = '[[ $symbol ($version) ](bg:#e6007c bold)]($style)'
+
+[elixir]
+symbol = " "
+style = "bg:#e6007c bold"
+format = '[[ $symbol ($version) ](bg:#e6007c bold)]($style)'
+
+[elm]
+symbol = " "
+style = "bg:#e6007c bold"
+format = '[[ $symbol ($version) ](bg:#e6007c bold)]($style)'
+
+[git_branch]
+symbol = ""
+style = "bg:#bf0196 bold"
+format = '[[ $symbol $branch ](bg:#bf0196 bold)]($style)'
+
+[git_status]
+style = "bg:#bf0196 bold"
+format = '[[($all_status$ahead_behind )](bg:#bf0196 bold)]($style)'
+
+[golang]
+symbol = " "
+style = "bg:#e6007c bold"
+format = '[[ $symbol ($version) ](bg:#e6007c bold)]($style)'
+
+[haskell]
+symbol = " "
+style = "bg:#e6007c bold"
+format = '[[ $symbol ($version) ](bg:#e6007c bold)]($style)'
+
+[java]
+symbol = " "
+style = "bg:#e6007c bold"
+format = '[[ $symbol ($version) ](bg:#e6007c bold)]($style)'
+
+[julia]
+symbol = " "
+style = "bg:#e6007c bold"
+format = '[[ $symbol ($version) ](bg:#e6007c bold)]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:#e6007c bold"
+format = '[[ $symbol ($version) ](bg:#e6007c bold)]($style)'
+
+[nim]
+symbol = " "
+style = "bg:#e6007c bold"
+format = '[[ $symbol ($version) ](bg:#e6007c bold)]($style)'
+
+[rust]
+symbol = ""
+style = "bg:#e6007c bold"
+format = '[[ $symbol ($version) ](bg:#e6007c bold)]($style)'
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "bg:#ff005c"
+format = '[  $time ]($style bold)'
