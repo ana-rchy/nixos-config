@@ -25,58 +25,10 @@
 
   boot.initrd.luks.devices."nix".device = "/dev/disk/by-uuid/f65a61da-1ba2-4eb9-ad62-347871b8bd0e";
 
-  fileSystems."/var/log" =
-    { device = "/nix/persist/system/var/log";
-      fsType = "none";
-      options = [ "bind" ];
-    };
-
-  fileSystems."/home/ana" =
-    { device = "/nix/persist/system/home/ana";
-      fsType = "none";
-      options = [ "bind" ];
-    };
-
   fileSystems."/boot" =
     { device = "/dev/disk/by-uuid/D913-D3B1";
       fsType = "vfat";
       options = [ "fmask=0022" "dmask=0022" ];
-    };
-
-  fileSystems."/var/lib/colord" =
-    { device = "/nix/persist/system/var/lib/colord";
-      fsType = "none";
-      options = [ "bind" ];
-    };
-
-  fileSystems."/var/lib/systemd/coredump" =
-    { device = "/nix/persist/system/var/lib/systemd/coredump";
-      fsType = "none";
-      options = [ "bind" ];
-    };
-
-  fileSystems."/var/lib/nixos" =
-    { device = "/nix/persist/system/var/lib/nixos";
-      fsType = "none";
-      options = [ "bind" ];
-    };
-
-  fileSystems."/etc/NetworkManager/system-connections" =
-    { device = "/nix/persist/system/etc/NetworkManager/system-connections";
-      fsType = "none";
-      options = [ "bind" ];
-    };
-
-  fileSystems."/var/lib/bluetooth" =
-    { device = "/nix/persist/system/var/lib/bluetooth";
-      fsType = "none";
-      options = [ "bind" ];
-    };
-
-  fileSystems."/etc/nixos" =
-    { device = "/nix/persist/system/etc/nixos";
-      fsType = "none";
-      options = [ "bind" ];
     };
 
   swapDevices =
