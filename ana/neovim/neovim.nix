@@ -268,6 +268,14 @@
       vim.api.nvim_set_keymap('n', '`', "", { callback = MiniFiles.open })
       vim.api.nvim_set_keymap('n', '<A-`>', "", { callback = MiniFiles.close })
 
+      -- paste in insert mode
+      vim.keymap.set('i', '<C-v>', '<Esc>pa', opts)
+
+      -- dont get rid of indentation after autoindent, if you move off of the line that was indented
+      vim.keymap.set('i', '<CR>', '<CR><Space><BS>')
+      vim.keymap.set('n', 'o', 'o<Space><BS>')
+      vim.keymap.set('n', 'O', 'O<Space><BS>')
+
       -- gets rid of padding between nvim window and the terminal border
       MiniMisc.setup_termbg_sync()
     '';
