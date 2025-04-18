@@ -1,18 +1,24 @@
-{ pkgs, config, home-manager, ... }:
+{pkgs, ...}:
 
 {
   programs.feh.enable = true;
   programs.gh.enable = true;
   programs.kitty.enable = true;
   programs.librewolf.enable = true;
-  programs.neovim.enable = true;
   programs.starship.enable = true;
 
   home = {
     packages = with pkgs; [
+      dotnet-runtime_9
+      dotnet-sdk_9
+      eog
+      gcc
+      godot-mono
+      nemo-fileroller
       nemo-with-extensions
       neofetch
       picom
+      rustup
       vesktop
     ];
 

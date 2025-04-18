@@ -1,14 +1,19 @@
 {
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-24.11";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     impermanence.url = "github:nix-community/impermanence";
     home-manager = {
-      url = "github:nix-community/home-manager/release-24.11";
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    nvf = {
+      url = "github:notashelf/nvf";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = { nixpkgs, impermanence, home-manager, ... }: {
+  outputs = { nixpkgs, impermanence, home-manager, nvf, ... }: {
     nixosConfigurations.PhoneWave = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
 
@@ -42,12 +47,15 @@
 	impermanence.nixosModules.impermanence
 
 	home-manager.nixosModules.home-manager {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-	  home-manager.users.ana.imports = [
-            ./ana
-	    ./ana/_laptop
-	  ];
+          home-manager = {
+	    useGlobalPkgs = true;
+            useUserPackages = true;
+	    users.ana.imports = [
+              ./ana
+              ./ana/_laptop
+	      nvf.homeManagerModules.default
+	    ];
+	  };
         }
       ];
     };
