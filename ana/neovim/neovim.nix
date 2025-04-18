@@ -16,6 +16,8 @@
       clang.enable = true;
       csharp.enable = true;
     };
+
+    searchCase = "smart";
     
     options = {
       tabstop = 4;
@@ -39,7 +41,16 @@
       basics.enable = true;
       bracketed.enable = true;
       clue.enable = true;
-      files.enable = true;
+      files = {
+        enable = true;
+
+        setupOpts.mappings = {
+          go_in = "<Right>";
+          go_in_plus = "<S-Right>";
+          go_out = "<Left>";
+          go_out_plus = "<S-Left>";
+        };
+      };
       jump.enable = true;
       jump2d.enable = true;
       misc.enable = true;
@@ -171,6 +182,18 @@
         setupOpts = {
           animation = true;
           auto_hide = 1;
+
+          icons = {
+            separator = {
+              left = "▎";
+              right = "▕";
+            };
+
+            current.buffer_index = false;
+            inactive.buffer_index = false;
+          };
+
+          minimum_padding = 0;
         };
 
         after = ''

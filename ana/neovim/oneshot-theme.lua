@@ -74,10 +74,16 @@ local theme = lush(function(injected_functions)
     CursorLine { bg = Normal.bg.lighten(3) }, -- Screen-line at the cursor, when 'cursorline' is set. Low-priority if foreground (ctermfg OR guifg) is not set.
     Directory { fg = hsluv(263, 100, 70) }, -- Directory names (and other special names in listings)
     DiffAdd { fg = hsluv(140, 100, 80) }, -- Diff mode: Added line |diff.txt|
-    DiffChange { fg = Normal.fg }, -- Diff mode: Changed line |diff.txt|
+    DiffChange { fg = hsluv(87, 92, 97) }, -- Diff mode: Changed line |diff.txt|
+    DiffText { fg = DiffChange.fg }, -- Diff mode: Changed text within a changed line |diff.txt|
     DiffDelete { fg = Cursor.bg.darken(5) }, -- Diff mode: Deleted line |diff.txt|
-    DiffText { fg = hsluv(87, 92, 97) }, -- Diff mode: Changed text within a changed line |diff.txt|
-    EndOfBuffer {}, -- Filler lines (~) after the end of the buffer. By default, this is highlighted like |hl-NonText|.
+    Added { fg = DiffAdd.fg },
+    Changed { fg = DiffChange.fg },
+    Removed { fg = DiffDelete.fg },
+    GitSignsStagedAdd { fg = Added.fg.lighten(50) },
+    GitSignsStagedChange { fg = Changed.fg.lighten(20) },
+    GitSignsStagedDelete { fg = Removed.fg.lighten(20) },
+    -- EndOfBuffer {}, -- Filler lines (~) after the end of the buffer. By default, this is highlighted like |hl-NonText|.
     -- TermCursor     { }, -- Cursor in a focused terminal
     -- TermCursorNC   { }, -- Cursor in an unfocused terminal
     ErrorMsg { fg = hsluv(10, 90, 50) }, -- Error messages on the command line
@@ -213,11 +219,11 @@ local theme = lush(function(injected_functions)
     -- DiagnosticVirtualTextInfo  { } , -- Used for "Info" diagnostic virtual text.
     -- DiagnosticVirtualTextHint  { } , -- Used for "Hint" diagnostic virtual text.
     -- DiagnosticVirtualTextOk    { } , -- Used for "Ok" diagnostic virtual text.
-    -- DiagnosticUnderlineError   { } , -- Used to underline "Error" diagnostics.
-    -- DiagnosticUnderlineWarn    { } , -- Used to underline "Warn" diagnostics.
-    -- DiagnosticUnderlineInfo    { } , -- Used to underline "Info" diagnostics.
-    -- DiagnosticUnderlineHint    { } , -- Used to underline "Hint" diagnostics.
-    -- DiagnosticUnderlineOk      { } , -- Used to underline "Ok" diagnostics.
+    DiagnosticUnderlineError   { sp = DiagnosticError.fg.lighten(5), gui = 'underline' } , -- Used to underline "Error" diagnostics.
+    DiagnosticUnderlineWarn    { sp = DiagnosticWarn.fg.lighten(10), gui = 'underline' } , -- Used to underline "Warn" diagnostics.
+    DiagnosticUnderlineInfo    { sp = DiagnosticInfo.fg.lighten(20), gui = 'underline' } , -- Used to underline "Info" diagnostics.
+    DiagnosticUnderlineHint    { sp = DiagnosticHint.fg.lighten(30), gui = 'underline' } , -- Used to underline "Hint" diagnostics.
+    DiagnosticUnderlineOk      { sp = DiagnosticOk.fg.lighten(10), gui = 'underline' } , -- Used to underline "Ok" diagnostics.
     -- DiagnosticFloatingError    { } , -- Used to color "Error" diagnostic messages in diagnostics float. See |vim.diagnostic.open_float()|
     -- DiagnosticFloatingWarn     { } , -- Used to color "Warn" diagnostic messages in diagnostics float.
     -- DiagnosticFloatingInfo     { } , -- Used to color "Info" diagnostic messages in diagnostics float.
@@ -255,21 +261,21 @@ local theme = lush(function(injected_functions)
     -- sym"@comment"           { }, -- Comment
     -- sym"@punctuation"       { }, -- Delimiter
     -- sym"@constant"          { }, -- Constant
-    -- sym"@constant.builtin"  { }, -- Special
-    -- sym"@constant.macro"    { }, -- Define
+    -- sym"@constant.builtin"  { fg = Constant.fg.lighten(25) }, -- Special
+    -- sym"@constant.macro"    { fg = sym"@constant.builtin".fg }, -- Define
     -- sym"@define"            { }, -- Define
     -- sym"@macro"             { }, -- Macro
     -- sym"@string"            { }, -- String
-    -- sym"@string.escape"     { }, -- SpecialChar
-    -- sym"@string.special"    { }, -- SpecialChar
+    sym"@string.escape"     { fg = Character.fg }, -- SpecialChar
+    sym"@string.special"    { fg = Character.fg }, -- SpecialChar
     -- sym"@character"         { }, -- Character
     -- sym"@character.special" { }, -- SpecialChar
     -- sym"@number"            { }, -- Number
     -- sym"@boolean"           { }, -- Boolean
     -- sym"@float"             { }, -- Float
     -- sym"@function"          { }, -- Function
-    -- sym"@function.builtin"  { }, -- Special
-    -- sym"@function.macro"    { }, -- Macro
+    sym"@function.builtin"  { fg = Function.fg.lighten(30) }, -- Special
+    -- sym"@function.macro"    { fg = sym"@function.builtin".fg }, -- Macro
     -- sym"@parameter"         { }, -- Identifier
     -- sym"@method"            { }, -- Function
     -- sym"@field"             { }, -- Identifier
@@ -291,6 +297,22 @@ local theme = lush(function(injected_functions)
     -- sym"@preproc"           { }, -- PreProc
     -- sym"@debug"             { }, -- Debug
     -- sym"@tag"               { }, -- Tag
+    
+
+
+    MiniJump2dSpot { bg = CurSearch.bg, fg = Normal.fg, gui = "bold,nocombine" },
+
+    BufferCurrent { fg = hsl(60, 100, 67) },
+    BufferCurrentSign { fg = BufferCurrent.fg },
+    BufferCurrentSignRight { fg = BufferCurrentSign.fg },
+    BufferCurrentMod { fg = BufferCurrent.fg },
+    BufferCurrentModBtn { fg = BufferCurrentMod.fg },
+
+    BufferInactive { fg = Comment.fg.lighten(5) },
+    BufferInactiveSign { fg = BufferInactive.fg.darken(35) },
+    BufferInactiveSignRight { fg = BufferInactiveSign.fg },
+    BufferInactiveMod { fg = BufferInactive.fg },
+    BufferInactiveModBtn { fg = BufferInactive.fg.lighten(25) },
   }
 end)
 
