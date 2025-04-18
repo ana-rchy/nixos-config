@@ -1,6 +1,4 @@
-{ pkgs, ... }:
-
-{
+{pkgs, ...}: {
   nixpkgs.config.pulseaudio = true;
   services.xserver.windowManager.bspwm.enable = true;
 
@@ -13,5 +11,6 @@
     unzip
     vim
     wget
+    xclip
   ];
 }

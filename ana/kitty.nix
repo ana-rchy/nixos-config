@@ -9,6 +9,8 @@ let
   yellow = "#fffe57";
   
   teal = "#00ffa3";
+
+  kitty_mod = "alt";
 in
 {
   programs.kitty = {
@@ -33,13 +35,13 @@ in
       cursor_trail_decay = "0.1 0.3";
 
       window_padding_width = "5 10";
+      window_border_width = 0;
+      hide_window_decorations = "yes";
 
       confirm_os_window_close = 0;
       wheel_scroll_multiplier = 2.0;
       strip_trailing_spaces = "smart";
       enable_audio_bell = false;
-
-      kitty_mod = "alt";
 
       ###: black
       color0 = "#573e4b";
@@ -82,18 +84,18 @@ in
     '';
 
     keybindings = {
-      "kitty_mod+c" = "copy_to_clipboard";
-      "kitty_mod+v" = "paste_from_clipboard";
-      "kitty_mod+s" = "paste_from_selection";
+      "${kitty_mod}+c" = "copy_to_clipboard";
+      "${kitty_mod}+v" = "paste_from_clipboard";
+      "${kitty_mod}+s" = "paste_from_selection";
 
-      "kitty_mod+up" = "scroll_line_up";
-      "kitty_mod+down" = "scroll_line_down";
-      "kitty_mod+page_up" = "scroll_page_up";
-      "kitty_mod+page_down" = "scroll_page_down";
+      "${kitty_mod}+up" = "scroll_line_up";
+      "${kitty_mod}+down" = "scroll_line_down";
+      "${kitty_mod}+page_up" = "scroll_page_up";
+      "${kitty_mod}+page_down" = "scroll_page_down";
 
-      "kitty_mod+plus" = "change_font_size current +1.0";
-      "kitty_mod+underscore" = "change_font_size current -1.0";
-      "kitty_mod+shift+backspace" = "change_font_size current 0";
+      "${kitty_mod}+plus" = "change_font_size current +1.0";
+      "${kitty_mod}+underscore" = "change_font_size current -1.0";
+      "${kitty_mod}+shift+backspace" = "change_font_size current 0";
     };
   };
 }
