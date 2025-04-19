@@ -12,10 +12,10 @@
       dotnet-runtime_9
       dotnet-sdk_9
       eog
+      file-roller
       gcc
       godot-mono
       lutris
-      nemo-fileroller
       nemo-with-extensions
       neofetch
       picom
@@ -29,7 +29,7 @@
       ".config/sxhkd/sxhkdrc".source = ./bspwm/sxhkdrc;
     };
   };
-
+  
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # The state version is required and should stay at the version you
