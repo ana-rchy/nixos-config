@@ -4,6 +4,7 @@
 
   environment.systemPackages = with pkgs; [
     bash
+    btop
     file
     git
     killall
@@ -11,6 +12,13 @@
     unzip
     vim
     wget
+    wine-staging
+    winetricks
     xclip
   ];
+  
+  # unfree
+  nixpkgs.config.allowUnfree = true;
+  
+  programs.steam.enable = true;
 }

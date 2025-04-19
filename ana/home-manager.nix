@@ -14,6 +14,7 @@
       eog
       gcc
       godot-mono
+      lutris
       nemo-fileroller
       nemo-with-extensions
       neofetch
