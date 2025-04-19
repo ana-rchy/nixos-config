@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   nixpkgs.config.pulseaudio = true;
   services.xserver.windowManager.bspwm.enable = true;
+  programs.dconf.enable = true; # needed for setting gtk theme
 
   environment.systemPackages = with pkgs; [
     bash

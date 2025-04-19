@@ -201,12 +201,12 @@
           local opts = { noremap = true, silent = true }
           
           -- Move to previous/next
-          map('n', '<A-,>', '<Cmd>BufferPrevious<CR>', opts)
-          map('n', '<A-.>', '<Cmd>BufferNext<CR>', opts)
+          map('n', '<A-Left>', '<Cmd>BufferPrevious<CR>', opts)
+          map('n', '<A-Right>', '<Cmd>BufferNext<CR>', opts)
           
           -- Re-order to previous/next
-          map('n', '<A-S-,>', '<Cmd>BufferMovePrevious<CR>', opts)
-          map('n', '<A-S-.>', '<Cmd>BufferMoveNext<CR>', opts)
+          map('n', '<A-S-Left>', '<Cmd>BufferMovePrevious<CR>', opts)
+          map('n', '<A-S-Right>', '<Cmd>BufferMoveNext<CR>', opts)
           
           -- Goto buffer in position...
           map('n', '<A-1>', '<Cmd>BufferGoto 1<CR>', opts)
@@ -228,7 +228,7 @@
           
           -- Magic buffer-picking mode
           map('n', '<C-p>',   '<Cmd>BufferPick<CR>', opts)
-          map('n', '<C-s-p>', '<Cmd>BufferPickDelete<CR>', opts)
+          map('n', '<C-S-p>', '<Cmd>BufferPickDelete<CR>', opts)
           
           -- Sort automatically by...
           map('n', '<Space>bb', '<Cmd>BufferOrderByBufferNumber<CR>', opts)

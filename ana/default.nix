@@ -5,6 +5,7 @@
     ./bspwm/bspwm.nix
     ./flameshot.nix
     ./git.nix
+    ./gtk-qt.nix
     ./kitty.nix
     ./neovim/neovim.nix
     ./polybar.nix
