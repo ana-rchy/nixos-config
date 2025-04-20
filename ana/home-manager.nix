@@ -14,13 +14,16 @@
       eog
       file-roller
       gcc
-      godot-mono
+      gnumake
       lutris
       nemo-with-extensions
       neofetch
       picom
       rustup
       vesktop
+      
+      hyfetch
+      fastfetch
     ];
 
     file = {

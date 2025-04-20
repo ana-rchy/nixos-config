@@ -1,3 +1,31 @@
+configuration {
+    font: "Terminus (TTF) 15";
+    dpi: 120;
+    
+    combi-modi: "window,drun";
+    
+    drun-display-format: "<b>{name}</b>   <span size='small'>[/ {exec} /]</span>";
+    
+    case-sensitive: false;
+    cycle: true;
+    eh: 1;
+    fixed-num-lines: true;
+    line-margin: 1;
+    line-padding: 2;
+    lines: 12;
+    location: 0;
+    modi: "window,drun";
+    normalize-match: true;
+    padding: 5;
+    scroll-method: 1;
+    sidebar-mode: false;
+    sort: true;
+    xoffset: 0;
+    yoffset: 0;
+}
+
+
+
 *{
     transparent:      rgba(0,0,0,0%);
     off-white:        #fbf6fc;
@@ -85,7 +113,7 @@ element.selected.urgent {
 
 window {
     width: 50%;
-    height: 40%;
+    height: 41%;
     background-color: @darker-red-pink;
     border-color:     @orange;
     border:           2;
@@ -104,7 +132,7 @@ listview {
     border:           2px dash 0 0;
     scrollbar:        true;
     spacing:          2px;
-    padding:          2px 0 0;
+    padding:          5px 0 0 0;
 }
 
 scrollbar {
@@ -123,6 +151,7 @@ inputbar {
 prompt {
     margin: 0 0 0 6px;
     text-color:       @pastel-yellow;
+    text-transform:   bold;
 }
 
 textbox-prompt-colon {
@@ -135,4 +164,5 @@ textbox-prompt-colon {
 entry {
     spacing:          0;
     text-color:       @pastel-yellow;
+    text-transform:   bold;
 }

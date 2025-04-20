@@ -74,6 +74,8 @@ in
       ###: white
       color7  = "#ffffff";
       color15 = "#ffffcd";
+      
+      scrollback_indicator_opacity = 0.0;
     };
 
     extraConfig = ''
