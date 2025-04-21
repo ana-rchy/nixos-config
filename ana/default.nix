@@ -10,8 +10,10 @@
     ./fetch/hyfetch.nix
     ./kitty.nix
     ./neovim/neovim.nix
+    ./picom/picom.nix
     ./polybar.nix
     ./rofi/rofi.nix
+    ./starship/starship.nix
     ./xdg-dirs.nix
     ./zsh.nix
   ];

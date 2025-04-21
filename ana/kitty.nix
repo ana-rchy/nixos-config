@@ -1,5 +1,3 @@
-{ pkgs, ...}:
-
 let
   red-pink = "#ff005c";
   dark-red-pink = "#821a3d";
