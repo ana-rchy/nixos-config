@@ -1,0 +1,122 @@
+// Inspired by Catnap
+{
+    "logo": {
+        "type": "builtin",
+    },
+    "display": {
+        "separator": "",
+        "key": {
+            "width": 18
+        }
+    },
+    "modules": [
+        {
+            "key": "\n",
+            "type": "custom",
+        },
+        {
+            // draw borders first to make colors of left and right border consistant
+            "key": " soweli",
+            "type": "title",
+            "format": "{user-name}",
+            "keyColor": "31",
+            "outputColor": "31",
+        },
+        {
+            "key": "󰇅 nimi ilo",
+            "type": "title",
+            "format": "{host-name}",
+            "keyColor": "96",
+            "outputColor": "96",
+        },
+        {
+            "key": " ",
+            "type": "custom",
+        },
+        {
+            "key": "{icon} namako",
+            "type": "os",
+            "keyColor": "36",
+            "outputColor": "36",
+        },
+        {
+            "key": " supa",
+            "type": "kernel",
+            "keyColor": "34",
+            "outputColor": "34",
+        },
+        {
+            "key": " poki",
+            "type": "packages",
+            "keyColor": "35",
+            "outputColor": "35",
+        },
+        {
+            "key": " ",
+            "type": "custom",
+        },
+        {
+            "key": "󰇄 lawa supa",
+            "type": "wm",
+            "keyColor": "31",
+            "outputColor": "31",
+        },
+        {
+            "key": " ilo sitelen",
+            "type": "shell",
+            "keyColor": "34",
+            "outputColor": "34",
+        },
+        {
+            "key": " supa sitelen",
+            "type": "terminal",
+            "keyColor": "32",
+            "outputColor": "32",
+        },
+        {
+            "key": " sitelen",
+            "type": "terminalfont",
+            "keyColor": "33",
+            "outputColor": "33",
+        },
+        {
+            "key": " ",
+            "type": "custom",
+        },
+        {
+            "key": "󰍛 pali sona",
+            "type": "cpu",
+            "showPeCoreCount": true,
+            "keyColor": "36",
+            "outputColor": "36",
+        },
+        {
+            "key": " poki sona",
+            "type": "memory",
+            "keyColor": "37",
+            "outputColor": "37",
+        },
+        {
+            "key": "󰇞 pali sitelen",
+            "type": "gpu",
+            "keyColor": "32",
+            "outputColor": "32",
+        },
+        {
+            "key": "󰅐 tenpo",
+            "type": "uptime",
+            "keyColor": "35",
+            "outputColor": "35",
+        },
+        {
+            "key": " ",
+            "type": "custom",
+        },
+        {
+            "key": " kule",
+            "type": "colors",
+            "symbol": "circle",
+            "keyColor": "37",
+        }
+    ]
+}

@@ -14,6 +14,8 @@ let
 in
 {
   programs.kitty = {
+    enable = true;
+    
     font.name = "Terminus (TTF)";
 
     settings = {

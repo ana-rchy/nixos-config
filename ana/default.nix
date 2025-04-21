@@ -3,9 +3,11 @@
     ./home-manager.nix
 
     ./bspwm/bspwm.nix
+    ./fetch/fastfetch.nix
     ./flameshot.nix
     ./git.nix
     ./gtk-qt.nix
+    ./fetch/hyfetch.nix
     ./kitty.nix
     ./neovim/neovim.nix
     ./polybar.nix

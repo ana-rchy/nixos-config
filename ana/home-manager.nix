@@ -17,13 +17,9 @@
       gnumake
       lutris
       nemo-with-extensions
-      neofetch
       picom
       rustup
       vesktop
-      
-      hyfetch
-      fastfetch
     ];
 
     file = {
