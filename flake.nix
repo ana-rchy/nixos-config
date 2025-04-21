@@ -1,6 +1,8 @@
 {
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs-godot.url = "github:nixos/nixpkgs/2631b0b7abce";
+    
     impermanence.url = "github:nix-community/impermanence";
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -13,8 +15,8 @@
     };
   };
 
-  outputs = { nixpkgs, impermanence, home-manager, nvf, ... }: {
-    nixosConfigurations.PhoneWave = nixpkgs.lib.nixosSystem {
+  outputs = { nixpkgs, nixpkgs-godot, impermanence, home-manager, nvf, ... }: {
+    nixosConfigurations.PhoneWave = nixpkgs.lib.nixosSystem rec {
       system = "x86_64-linux";
 
       modules = [
@@ -27,14 +29,24 @@
 	impermanence.nixosModules.impermanence
 
 	home-manager.nixosModules.home-manager {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.users.ana = ./ana/home-manager.nix;
+          home-manager = {
+	    useGlobalPkgs = true;
+	    useUserPackages = true;
+	    users.ana.imports = [
+              ./ana
+              ./ana/_desktop
+	      nvf.homeManagerModules.default
+	    ];
+	  };
+	  
+	  extraSpecialArgs = {
+	    pkgs-godot = nixpkgs-godot.legacyPackages."${system}";
+	  };
         }
       ];
     };
 
-    nixosConfigurations.carbomb = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.carbomb = nixpkgs.lib.nixosSystem rec {
       system = "x86_64-linux";
 
       modules = [
@@ -55,9 +67,14 @@
               ./ana/_laptop
 	      nvf.homeManagerModules.default
 	    ];
+	    
+	    extraSpecialArgs = {
+	      pkgs-godot = nixpkgs-godot.legacyPackages."${system}";
+	    };
 	  };
-        }
+	}
       ];
     };
+    
   };
 }

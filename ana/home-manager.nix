@@ -1,10 +1,12 @@
-{pkgs, ...}:
+{ pkgs, pkgs-godot, ... }:
 
 {
-  programs.feh.enable = true;
-  programs.gh.enable = true;
-  programs.kitty.enable = true;
-  programs.librewolf.enable = true;
+  programs = {
+    feh.enable = true;
+    gh.enable = true;
+    kitty.enable = true;
+    librewolf.enable = true;
+  };
 
   home = {
     packages = with pkgs; [
@@ -18,6 +20,8 @@
       nemo-with-extensions
       rustup
       vesktop
+      
+      pkgs-godot.godot-mono
     ];
   };
   

@@ -7,5 +7,7 @@
     videos = "$HOME/sitelen-tawa";
     music = "$HOME/kalama";
     documents = "$HOME/lipu";
+    
+    desktop = null;
   };
 }
