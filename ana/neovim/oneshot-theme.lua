@@ -153,43 +153,47 @@ local theme = lush(function(injected_functions)
 
     Comment { fg = Normal.bg.desaturate(40).lighten(35) }, -- Any comment
 
-    Constant { fg = hsluv(238, 90, 70) }, -- (*) Any constant
-    String { fg = Constant.fg.lighten(50) }, --   A string constant: "this is a string"
-    Character { fg = String.fg.lighten(40) }, --   A character constant: 'c', '\n'
+    Constant { fg = hsluv(150, 100, 85) }, -- (*) Any constant
+    String { fg = Constant.fg.lighten(40) }, --   A string constant: "this is a string"
+    Character { fg = String.fg.lighten(25) }, --   A character constant: 'c', '\n'
     -- Number         { }, --   A number constant: 234, 0xff
     Boolean { fg = hsluv(150, 100, 72) }, --   A boolean constant: TRUE, false
     -- Float          { }, --   A floating point constant: 2.3e10
 
     Identifier { fg = Directory.fg.lighten(50) }, -- (*) Any variable name
-    Function { fg = Identifier.fg.darken(32) }, --   Function name (also: methods for classes)
+    Function { fg = hsluv(4, 100, 57) }, --   Function name (also: methods for classes)
 
-    Statement { fg = hsluv(150, 100, 85) }, -- (*) Any statement
+    Statement { fg = hsluv(85, 90, 97) }, -- (*) Any statement
     -- Conditional    { }, --   if, then, else, endif, switch, etc.
     -- Repeat         { }, --   for, do, while, etc.
     -- Label          { }, --   case, default, etc.
-    -- Operator       { }, --   "sizeof", "+", "*", etc.
+    Operator       { fg = Function.fg.lighten(25) }, --   "sizeof", "+", "*", etc.
     -- Keyword        { }, --   any other keyword
-    Exception { fg = hsluv(4, 190, 56) }, --   try, catch, throw
+    Exception { fg = hsluv(4, 100, 56) }, --   try, catch, throw
 
-    PreProc { fg = hsluv(20, 100, 63) }, -- (*) Generic Preprocessor
+    PreProc { fg = Statement.fg.lighten(30) }, -- (*) Generic Preprocessor
     -- Include        { }, --   Preprocessor #include
     -- Define         { }, --   Preprocessor #define
     -- Macro          { }, --   Same as Define
     -- PreCondit      { }, --   Preprocessor #if, #else, #endif, etc.
 
-    Type { fg = hsluv(86, 100, 98) }, -- (*) int, long, char, etc.
+    Type { fg = hsluv(279, 90, 55) }, -- (*) int, long, char, etc.
     -- StorageClass   { }, --   static, register, volatile, etc.
     -- Structure      { }, --   struct, union, enum, etc.
     -- Typedef        { }, --   A typedef
+    
+    -- hsl(324, 100, 72)
+    -- hsluv(25, 94, 67)
+    -- hsl(237, 100, 72)
 
-    Special { fg = Constant.fg.desaturate(10) }, -- (*) Any special symbol
+    Special { fg = hsluv(14, 100, 61) }, -- (*) Any special symbol
     -- SpecialChar    { }, --   Special character in a constant
     -- Tag            { }, --   You can use CTRL-] on this
-    Delimiter { fg = Character.fg }, --   Character that needs attention
+    Delimiter { fg = hsl(326, 87, 60) }, --   Character that needs attention
     -- SpecialComment { }, --   Special things inside a comment (e.g. '\n')
     -- Debug          { }, --   Debugging statements
 
-    Underlined { fg = Function.fg.lighten(30), gui = 'underline' }, -- Text that stands out, HTML links
+    Underlined { fg = Delimiter.fg, gui = 'underline' }, -- Text that stands out, HTML links
     Ignore { fg = Comment.fg.darken(10) }, -- Left blank, hidden |hl-Ignore| (NOTE: May be invisible here in template)
     Error { bg = Exception.fg.darken(5), fg = Normal.bg }, -- Any erroneous construct
     Todo { bg = Type.fg.darken(6), fg = Normal.bg }, -- Anything that needs extra attention; mostly the keywords TODO FIXME and XXX
@@ -285,7 +289,7 @@ local theme = lush(function(injected_functions)
     -- sym"@repeat"            { }, -- Repeat
     -- sym"@label"             { }, -- Label
     -- sym"@operator"          { }, -- Operator
-    -- sym"@keyword"           { }, -- Keyword
+    -- sym"@keyword"           { fg = PreProc.fg }, -- Keyword
     -- sym"@exception"         { }, -- Exception
     -- sym"@variable"          { }, -- Identifier
     -- sym"@type"              { }, -- Type

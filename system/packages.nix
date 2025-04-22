@@ -22,4 +22,9 @@
   nixpkgs.config.allowUnfree = true;
   
   programs.steam.enable = true;
+  
+  # insecure
+  nixpkgs.config.permittedInsecurePackages = with pkgs; [
+    "olm-3.2.16" # allow nheko on system
+  ];
 }

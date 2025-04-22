@@ -6,6 +6,7 @@
     gh.enable = true;
     kitty.enable = true;
     librewolf.enable = true;
+    nheko.enable = true;
   };
 
   home = {
@@ -19,6 +20,7 @@
       lutris
       nemo-with-extensions
       rustup
+      signal-desktop-bin
       vesktop
       
       pkgs-godot.godot-mono
