@@ -11,8 +11,7 @@
 
   home = {
     packages = with pkgs; [
-      dotnet-runtime_9
-      dotnet-sdk_9
+      dotnetCorePackages.sdk_8_0-bin
       eog
       file-roller
       gcc
