@@ -13,5 +13,9 @@
     '';
 
     dotDir = ".config/zsh/";
+    
+    shellAliases = {
+      cd = "z";
+    };
   };
 }

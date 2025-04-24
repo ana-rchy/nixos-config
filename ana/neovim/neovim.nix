@@ -11,10 +11,10 @@
       enableDAP = true;
       enableExtraDiagnostics = true;
 
-      nix.enable = true;
-      rust.enable = true;
       clang.enable = true;
       csharp.enable = true;
+      nix.enable = true;
+      rust.enable = true;
     };
 
     searchCase = "smart";
@@ -32,7 +32,6 @@
 
     mini = {
       comment.enable = true;
-      completion.enable = true;
       move.enable = true;
       pairs.enable = true;
       splitjoin.enable = true;
@@ -68,6 +67,20 @@
             hex_color = require('mini.hipatterns').gen_highlighter.hex_color(),
           }'';
         };
+      };
+    };
+    
+    autocomplete.blink-cmp = {
+      enable = true;
+      
+      setupOpts.completion.documentation = {
+        auto_show = true;
+        auto_show_delay_ms = 200;
+      };
+      
+      mappings = {
+        scrollDocsUp = "<C-Up>";
+        scrollDocsDown = "<C-Down>";
       };
     };
 

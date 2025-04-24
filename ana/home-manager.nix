@@ -7,6 +7,10 @@
     kitty.enable = true;
     librewolf.enable = true;
     nheko.enable = true;
+    zoxide = {
+      enable = true;
+      enableZshIntegration = true;
+    };
   };
 
   home = {
@@ -18,8 +22,10 @@
       gnumake
       lutris
       nemo-with-extensions
+      prismlauncher
       rustup
       signal-desktop-bin
+      tetrio-desktop
       vesktop
       
       pkgs-godot.godot-mono
