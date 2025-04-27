@@ -159,6 +159,22 @@
         "type": "github"
       }
     },
+    "nixpkgs-olympus": {
+      "locked": {
+        "lastModified": 1744547132,
+        "narHash": "sha256-j06ALmRcZ1U1sOHBSe3OTrjsPd/0tyZhKChlLm8Eopw=",
+        "owner": "Petingoso",
+        "repo": "nixpkgs",
+        "rev": "a0299283562206470381b62b817c217fee58bbe6",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Petingoso",
+        "ref": "olympus",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "nvf": {
       "inputs": {
         "flake-parts": "flake-parts",
@@ -190,6 +206,7 @@
         "impermanence": "impermanence",
         "nixpkgs": "nixpkgs",
         "nixpkgs-godot": "nixpkgs-godot",
+        "nixpkgs-olympus": "nixpkgs-olympus",
         "nvf": "nvf"
       }
     },

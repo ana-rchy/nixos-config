@@ -2,6 +2,7 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-godot.url = "github:nixos/nixpkgs/2631b0b7abce";
+    nixpkgs-olympus.url = "github:Petingoso/nixpkgs/olympus";
     
     impermanence.url = "github:nix-community/impermanence";
     home-manager = {
@@ -15,7 +16,7 @@
     };
   };
 
-  outputs = { nixpkgs, nixpkgs-godot, impermanence, home-manager, nvf, ... }: {
+  outputs = { nixpkgs, nixpkgs-godot, nixpkgs-olympus, impermanence, home-manager, nvf, ... }: {
     nixosConfigurations.PhoneWave = nixpkgs.lib.nixosSystem rec {
       system = "x86_64-linux";
 
@@ -41,6 +42,7 @@
 	  
 	  extraSpecialArgs = {
 	    pkgs-godot = nixpkgs-godot.legacyPackages."${system}";
+	    pkgs-olympus = nixpkgs-olympus.legacyPackages."${system}";
 	  };
         }
       ];
@@ -70,6 +72,7 @@
 	    
 	    extraSpecialArgs = {
 	      pkgs-godot = nixpkgs-godot.legacyPackages."${system}";
+	      pkgs-olympus = nixpkgs-olympus.legacyPackages."${system}";
 	    };
 	  };
 	}

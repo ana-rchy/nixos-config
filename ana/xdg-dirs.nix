@@ -8,6 +8,8 @@
     music = "$HOME/kalama";
     documents = "$HOME/lipu";
     
-    desktop = null;
+    desktop = "$HOME";
+    publicShare = null;
+    templates = null;
   };
 }

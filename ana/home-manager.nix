@@ -1,4 +1,4 @@
-{ pkgs, pkgs-godot, ... }:
+{ pkgs, pkgs-godot, pkgs-olympus, ... }:
 
 {
   programs = {
@@ -22,6 +22,7 @@
       gnumake
       lutris
       nemo-with-extensions
+      pavucontrol
       prismlauncher
       rustup
       signal-desktop-bin
@@ -29,6 +30,8 @@
       vesktop
       
       pkgs-godot.godot-mono
+      
+      pkgs-olympus.olympus
     ];
   };
   
