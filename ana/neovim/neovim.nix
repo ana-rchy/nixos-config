@@ -16,6 +16,10 @@
       nix.enable = true;
       rust.enable = true;
     };
+    
+    lsp.mappings = {
+      renameSymbol = "<leader>rn";
+    };
 
     searchCase = "smart";
     
@@ -28,6 +32,8 @@
       relativenumber = false;
 
       clipboard = "unnamedplus";
+      
+      tm = 2000;
     };
 
     mini = {
@@ -180,6 +186,19 @@
 
     git = {
       gitsigns.enable = true;
+    };
+    
+    telescope = {
+      enable = true;
+      
+      mappings = {
+        lspDefinitions = "<leader>gd";
+        lspDocumentSymbols = "<leader>ds";
+        lspImplementations = "<leader>gi";
+        lspReferences = "<leader>gr";
+        lspTypeDefinitions = "<leader>td";
+        lspWorkspaceSymbols = "<leader>ws";
+      };
     };
 
     lazy.plugins = {
