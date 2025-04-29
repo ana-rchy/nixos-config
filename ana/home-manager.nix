@@ -6,7 +6,9 @@
     gh.enable = true;
     kitty.enable = true;
     librewolf.enable = true;
+    mpv.enable = true;
     nheko.enable = true;
+    obs-studio.enable = true;
     zoxide = {
       enable = true;
       enableZshIntegration = true;
