@@ -5,7 +5,6 @@
     feh.enable = true;
     gh.enable = true;
     kitty.enable = true;
-    librewolf.enable = true;
     mpv.enable = true;
     nheko.enable = true;
     obs-studio.enable = true;
@@ -21,11 +20,12 @@
 
   home = {
     packages = with pkgs; [
-      dotnetCorePackages.sdk_8_0-bin
+      dotnetCorePackages.sdk_9_0-bin
       eog
       file-roller
       gcc
       gnumake
+      librewolf
       lutris
       nemo-with-extensions
       pavucontrol

@@ -6,7 +6,6 @@
 
   programs.nvf.settings.vim = {
     languages = {
-      enableLSP = true;
       enableTreesitter = true;
       enableDAP = true;
       enableExtraDiagnostics = true;
@@ -17,8 +16,12 @@
       rust.enable = true;
     };
     
-    lsp.mappings = {
-      renameSymbol = "<leader>rn";
+    lsp = {
+      enable = true;
+      
+      mappings = {
+        renameSymbol = "<leader>rn";
+      };
     };
 
     searchCase = "smart";
