@@ -20,11 +20,12 @@
 
   home = {
     packages = with pkgs; [
-      dotnetCorePackages.sdk_9_0-bin
+      dotnetCorePackages.sdk_8_0-bin
       eog
       file-roller
       gcc
       gnumake
+      helvum
       librewolf
       lutris
       nemo-with-extensions

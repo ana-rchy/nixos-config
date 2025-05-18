@@ -1,7 +1,16 @@
 {pkgs, ...}: {
   nixpkgs.config.pulseaudio = true;
+  
   services.xserver.windowManager.bspwm.enable = true;
+  services.flatpak.enable = true;
+  
   programs.dconf.enable = true; # needed for setting gtk theme
+  
+  xdg.portal = {
+    enable = true;
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+    config.common.default = [ "gtk" ];
+  };
 
   environment.systemPackages = with pkgs; [
     bash

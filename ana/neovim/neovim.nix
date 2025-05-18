@@ -11,7 +11,11 @@
       enableExtraDiagnostics = true;
 
       clang.enable = true;
-      csharp.enable = true;
+      csharp = {
+        enable = true;
+        lsp.enable = true;
+        lsp.server = "omnisharp";
+      };
       nix.enable = true;
       rust.enable = true;
     };
@@ -90,6 +94,14 @@
       mappings = {
         scrollDocsUp = "<C-Up>";
         scrollDocsDown = "<C-Down>";
+      };
+    };
+    
+    diagnostics = {
+      enable = true;
+      
+      config = {
+        virtual_lines = true;
       };
     };
 
