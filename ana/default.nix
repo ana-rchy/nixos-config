@@ -3,6 +3,7 @@
     ./home-manager.nix
 
     ./bspwm/bspwm.nix
+    ./celeste-olympus.nix
     ./fetch/fastfetch.nix
     ./flameshot.nix
     ./git.nix

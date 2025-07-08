@@ -1,4 +1,4 @@
-{ pkgs, pkgs-godot, pkgs-olympus, ... }:
+{ pkgs, pkgs-godot, ... }:
 
 {
   programs = {
@@ -20,25 +20,29 @@
 
   home = {
     packages = with pkgs; [
-      dotnetCorePackages.sdk_8_0-bin
+      appimage-run
+      croc
+      dotnet-sdk
       eog
+      equibop
       file-roller
+      foliate
       gcc
+      gimp
       gnumake
       helvum
       librewolf
       lutris
       nemo-with-extensions
       pavucontrol
+      piper
       prismlauncher
       rustup
       signal-desktop-bin
       tetrio-desktop
-      vesktop
+      vintagestory
       
       pkgs-godot.godot-mono
-      
-      pkgs-olympus.olympus
     ];
   };
   

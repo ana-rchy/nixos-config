@@ -1,10 +1,16 @@
 {pkgs, ...}: {
   nixpkgs.config.pulseaudio = true;
   
-  services.xserver.windowManager.bspwm.enable = true;
-  services.flatpak.enable = true;
+  services = {
+    xserver.windowManager.bspwm.enable = true;
+    flatpak.enable = true;
+    ratbagd.enable = true;
+  };
   
-  programs.dconf.enable = true; # needed for setting gtk theme
+  programs = {
+    dconf.enable = true; # needed for setting gtk theme
+    firejail.enable = true;
+  };
   
   xdg.portal = {
     enable = true;
@@ -30,10 +36,14 @@
   # unfree
   nixpkgs.config.allowUnfree = true;
   
-  programs.steam.enable = true;
+  programs.steam = {
+    enable = true;
+    extraPackages = [ pkgs.adwsteamgtk ];
+  };
   
   # insecure
   nixpkgs.config.permittedInsecurePackages = with pkgs; [
+    "dotnet-runtime-7.0.20"
     "olm-3.2.16" # allow nheko on system
   ];
 }
