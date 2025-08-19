@@ -5,6 +5,9 @@
     xserver.windowManager.bspwm.enable = true;
     flatpak.enable = true;
     ratbagd.enable = true;
+    openvpn.servers = {
+      meow = { config = '' config /home/ana/vpn.conf ''; };
+    };
   };
   
   programs = {
@@ -24,6 +27,7 @@
     file
     git
     killall
+    miniupnpc
     tree
     unzip
     vim
@@ -42,7 +46,7 @@
   };
   
   # insecure
-  nixpkgs.config.permittedInsecurePackages = with pkgs; [
+  nixpkgs.config.permittedInsecurePackages = [
     "dotnet-runtime-7.0.20"
     "olm-3.2.16" # allow nheko on system
   ];

@@ -26,11 +26,13 @@
       eog
       equibop
       file-roller
+      firejail
       foliate
       gcc
       gimp
       gnumake
       helvum
+      libresprite
       librewolf
       lutris
       nemo-with-extensions

@@ -207,12 +207,12 @@
       enable = true;
       
       mappings = {
-        lspDefinitions = "<leader>gd";
-        lspDocumentSymbols = "<leader>ds";
-        lspImplementations = "<leader>gi";
-        lspReferences = "<leader>gr";
-        lspTypeDefinitions = "<leader>td";
-        lspWorkspaceSymbols = "<leader>ws";
+        lspDefinitions = "<leader>def";
+        lspDocumentSymbols = "<leader>dsym";
+        lspImplementations = "<leader>imp";
+        lspReferences = "<leader>ref";
+        lspTypeDefinitions = "<leader>tdef";
+        lspWorkspaceSymbols = "<leader>wsym";
       };
     };
 

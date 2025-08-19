@@ -16,6 +16,6 @@
     ./x11.nix
     ./zsh.nix
   ];
-
+  
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 }
