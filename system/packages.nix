@@ -5,9 +5,9 @@
     xserver.windowManager.bspwm.enable = true;
     flatpak.enable = true;
     ratbagd.enable = true;
-    openvpn.servers = {
-      meow = { config = '' config /home/ana/vpn.conf ''; };
-    };
+    # openvpn.servers = {
+    #   meow = { config = '' config /home/ana/vpn.conf ''; };
+    # };
   };
   
   programs = {
