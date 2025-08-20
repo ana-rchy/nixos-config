@@ -42,11 +42,20 @@
       
       tm = 2000;
     };
+    
+    autopairs.nvim-autopairs = {
+      enable = true;
+      
+      setupOpts = {
+        enable_check_bracket_line = true;
+        ignored_next_char = "[%w%._]";
+      };
+    };
 
     mini = {
       comment.enable = true;
       move.enable = true;
-      pairs.enable = true;
+      # pairs.enable = true;
       splitjoin.enable = true;
       surround.enable = true;
 
