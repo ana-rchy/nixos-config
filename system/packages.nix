@@ -20,6 +20,8 @@
     extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
     config.common.default = [ "gtk" ];
   };
+  
+  virtualisation.docker.enable = true;
 
   environment.systemPackages = with pkgs; [
     bash

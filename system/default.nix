@@ -13,6 +13,7 @@
     ./packages.nix
     ./persistence.nix
     ./user.nix
+    ./virt-manager.nix
     ./x11.nix
     ./zsh.nix
   ];

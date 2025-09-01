@@ -1,4 +1,4 @@
-{ pkgs, pkgs-godot, ... }:
+{ pkgs, ... }:
 
 {
   programs = {
@@ -31,11 +31,15 @@
       gcc
       gimp
       gnumake
+      godot-mono
       helvum
+      keepassxc
       libresprite
       librewolf
       lutris
       nemo-with-extensions
+      openjdk17-bootstrap
+      osu-lazer-bin
       pavucontrol
       piper
       prismlauncher
@@ -43,8 +47,6 @@
       signal-desktop-bin
       tetrio-desktop
       vintagestory
-      
-      pkgs-godot.godot-mono
     ];
   };
   
