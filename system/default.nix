@@ -3,6 +3,7 @@
     ./audio.nix
     ./bluetooth.nix
     ./boot.nix
+    ./clamav.nix
     ./display-manager.nix
     ./firewall.nix
     ./fonts.nix

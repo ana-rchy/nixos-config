@@ -5,7 +5,9 @@
     ./bspwm/bspwm.nix
     ./celeste-olympus.nix
     ./fetch/fastfetch.nix
+    ./fcitx.nix
     ./flameshot.nix
+    ./flatpak.nix
     ./git.nix
     ./gtk-qt.nix
     ./fetch/hyfetch.nix

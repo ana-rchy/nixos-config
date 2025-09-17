@@ -13,9 +13,11 @@
       url = "github:notashelf/nvf";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
   };
 
-  outputs = { nixpkgs, nixpkgs-olympus, impermanence, home-manager, nvf, ... }: {
+  outputs = { nixpkgs, nixpkgs-olympus, impermanence, home-manager, nvf, nix-flatpak, ... }: {
     nixosConfigurations.PhoneWave = nixpkgs.lib.nixosSystem rec {
       system = "x86_64-linux";
 
@@ -27,7 +29,7 @@
 	./ana/_desktop/user.nix
 
 	impermanence.nixosModules.impermanence
-
+	
 	home-manager.nixosModules.home-manager {
           home-manager = {
 	    useGlobalPkgs = true;
@@ -36,6 +38,7 @@
               ./ana
               ./ana/_desktop
 	      nvf.homeManagerModules.default
+	      nix-flatpak.homeManagerModules.nix-flatpak
 	    ];
 	  };
 	  
@@ -66,6 +69,7 @@
               ./ana
               ./ana/_laptop
 	      nvf.homeManagerModules.default
+	      nix-flatpak.homeManagerModules.nix-flatpak
 	    ];
 	    
 	    extraSpecialArgs = {

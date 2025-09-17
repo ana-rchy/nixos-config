@@ -31,21 +31,20 @@
     killall
     miniupnpc
     tree
+    unar
     unzip
     vim
     wget
-    wine-staging
     winetricks
+    wineWowPackages.stable
     xclip
+    zip
   ];
   
   # unfree
   nixpkgs.config.allowUnfree = true;
   
-  programs.steam = {
-    enable = true;
-    extraPackages = [ pkgs.adwsteamgtk ];
-  };
+  programs.steam.enable = true;
   
   # insecure
   nixpkgs.config.permittedInsecurePackages = [
