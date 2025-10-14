@@ -1,7 +1,7 @@
-{ ... }:
-
 {
   services.flatpak.packages = [
-    # empty for now
+    "io.github.tfuxu.floodit"
+    "com.agateau.PixelWheels"
+    "org.vinegarhq.Sober"
   ];
 }

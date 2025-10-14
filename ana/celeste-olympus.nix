@@ -1,14 +1,10 @@
-{ pkgs-olympus, ... }:
+{ pkgs, ... }:
 
 {
   home = {
-    packages = [
-      pkgs-olympus.olympus
+    packages = with pkgs; [
+      olympus
     ];
-    
-    sessionVariables = {
-      OLYMPUS_CELESTE_WRAPPER = "steam-run";
-    };
   };
   
   xdg.desktopEntries."Celeste" = {

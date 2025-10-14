@@ -7,14 +7,18 @@
     ./display-manager.nix
     ./firewall.nix
     ./fonts.nix
+    ./gamemode.nix
     ./home-manager.nix
     ./input.nix
     ./locale.nix
+    ./lock-screen.nix
+    ./logind.nix
     ./network.nix
     ./packages.nix
     ./persistence.nix
     ./user.nix
     ./virt-manager.nix
+    ./virtualbox.nix
     ./x11.nix
     ./zsh.nix
   ];

@@ -1,7 +1,6 @@
 {
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    nixpkgs-olympus.url = "github:Petingoso/nixpkgs/olympus";
     
     impermanence.url = "github:nix-community/impermanence";
     home-manager = {
@@ -17,7 +16,7 @@
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
   };
 
-  outputs = { nixpkgs, nixpkgs-olympus, impermanence, home-manager, nvf, nix-flatpak, ... }: {
+  outputs = { nixpkgs, impermanence, home-manager, nvf, nix-flatpak, ... }: {
     nixosConfigurations.PhoneWave = nixpkgs.lib.nixosSystem rec {
       system = "x86_64-linux";
 
@@ -43,7 +42,7 @@
 	  };
 	  
 	  extraSpecialArgs = {
-	    pkgs-olympus = nixpkgs-olympus.legacyPackages."${system}";
+	    ##
 	  };
         }
       ];
@@ -73,7 +72,7 @@
 	    ];
 	    
 	    extraSpecialArgs = {
-	      pkgs-olympus = nixpkgs-olympus.legacyPackages."${system}";
+	      ##
 	    };
 	  };
 	}

@@ -9,7 +9,10 @@
     nheko.enable = true;
     obs-studio = {
       enable = true;
-      plugins = [ pkgs.obs-studio-plugins.input-overlay ];
+      plugins = with pkgs; [
+        obs-studio-plugins.input-overlay
+        obs-studio-plugins.obs-vaapi
+      ];
     };
     zoxide = {
       enable = true;
@@ -25,7 +28,9 @@
     packages = with pkgs; [
       adwsteamgtk
       appimage-run
+      audacious
       beyond-all-reason
+      clamtk
       croc
       dotnet-sdk
       eog
@@ -36,6 +41,7 @@
       foliate
       gcc
       gimp
+      gnome-tetravex
       gnumake
       godot-mono
       helvum
@@ -44,6 +50,7 @@
       librewolf
       lutris
       mindustry
+      mumble
       nemo-with-extensions
       openjdk17-bootstrap
       osu-lazer-bin

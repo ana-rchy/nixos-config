@@ -21,7 +21,10 @@
     config.common.default = [ "gtk" ];
   };
   
-  virtualisation.docker.enable = true;
+  virtualisation.docker = {
+    enable = true;
+    enableOnBoot = false;
+  };
 
   environment.systemPackages = with pkgs; [
     bash
