@@ -1,4 +1,10 @@
 {
+  fileSystems."/" = {
+    device = "none";
+    fsType = "tmpfs";
+    options = [ "mode=555" ];
+  };
+  
   environment.persistence."/nix/persist/system" = {
     enable = true;
     hideMounts = true;

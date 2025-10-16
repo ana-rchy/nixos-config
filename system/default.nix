@@ -15,7 +15,7 @@
     ./logind.nix
     ./network.nix
     ./packages.nix
-    ./persistence.nix
+    ./persistence-impermanence.nix
     ./user.nix
     ./virt-manager.nix
     ./virtualbox.nix

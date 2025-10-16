@@ -13,11 +13,6 @@
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
 
-  fileSystems."/" =
-    { device = "none";
-      fsType = "tmpfs";
-    };
-
   fileSystems."/nix" =
     { device = "/dev/disk/by-uuid/35792f13-e2a1-4e97-920e-a1594084fc6f";
       fsType = "ext4";

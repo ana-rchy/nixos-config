@@ -46,6 +46,10 @@
 	  };
         }
       ];
+      
+      specialArgs = {
+	##
+      };
     };
 
     nixosConfigurations.carbomb = nixpkgs.lib.nixosSystem rec {
@@ -77,6 +81,10 @@
 	  };
 	}
       ];
+      
+      specialArgs = {
+	##
+      };
     };
     
   };
