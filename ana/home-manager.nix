@@ -58,11 +58,12 @@
       piper
       prismlauncher
       python312
+      qbittorrent
       rustup
       signal-desktop-bin
       tetrio-desktop
       vintagestory
-      warzone2100
+      # warzone2100
     ];
   };
   
