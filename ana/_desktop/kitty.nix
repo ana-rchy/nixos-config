@@ -1,3 +1,3 @@
 {
-  programs.kitty.font.size = 18;
+  programs.kitty.font.size = 16;
 }

@@ -13,17 +13,34 @@
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
 
+  fileSystems."/" =
+    { device = "none";
+      fsType = "tmpfs";
+    };
+
+  fileSystems."/boot" =
+    { device = "/dev/disk/by-label/boot";
+      fsType = "vfat";
+      options = [ "fmask=0022" "dmask=0022" ];
+    };
+
   fileSystems."/nix" =
-    { device = "/dev/disk/by-uuid/0a0a26eb-0db7-4027-bf15-adad05e7c661";
+    { device = "/dev/disk/by-label/nixosBTW";
       fsType = "ext4";
     };
 
   boot.initrd.luks.devices."nix".device = "/dev/disk/by-uuid/db073a44-8ab0-4e0c-8c6d-ab373d965748";
 
-  fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/A9D1-18B1";
-      fsType = "vfat";
-      options = [ "fmask=0077" "dmask=0077" ];
+  fileSystems."/etc/nixos" =
+    { device = "/nix/persist/system/etc/nixos";
+      fsType = "none";
+      options = [ "bind" ];
+    };
+
+  fileSystems."/var/log" =
+    { device = "/nix/persist/system/var/log";
+      fsType = "none";
+      options = [ "bind" ];
     };
 
   swapDevices = [ ];

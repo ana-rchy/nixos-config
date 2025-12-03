@@ -139,7 +139,5 @@ in
         poll-interval = 1;
       };
     };
-
-    script = "killall polybar; polybar all &";
   };
 }

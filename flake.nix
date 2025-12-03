@@ -2,7 +2,10 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     
-    impermanence.url = "github:nix-community/impermanence";
+    impermanence = {
+      url = "github:nix-community/impermanence";
+    };
+    
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -13,10 +16,17 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     
-    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
+    nix-flatpak = {
+      url = "github:gmodena/nix-flatpak/?ref=latest";
+    };
+    
+    hakurei = {
+      url = "git+https://git.gensokyo.uk/security/hakurei";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { nixpkgs, impermanence, home-manager, nvf, nix-flatpak, ... }: {
+  outputs = { nixpkgs, impermanence, home-manager, nvf, nix-flatpak, hakurei, ... }: {
     nixosConfigurations.PhoneWave = nixpkgs.lib.nixosSystem rec {
       system = "x86_64-linux";
 
@@ -28,6 +38,8 @@
 	./ana/_desktop/user.nix
 
 	impermanence.nixosModules.impermanence
+	
+	hakurei.nixosModules.hakurei
 	
 	home-manager.nixosModules.home-manager {
           home-manager = {
@@ -63,6 +75,8 @@
 	./ana/_laptop/user.nix
 
 	impermanence.nixosModules.impermanence
+	
+	hakurei.nixosModules.hakurei
 
 	home-manager.nixosModules.home-manager {
           home-manager = {

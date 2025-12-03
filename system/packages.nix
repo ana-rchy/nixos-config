@@ -35,6 +35,7 @@
     git
     killall
     miniupnpc
+    piper
     tree
     unar
     unzip

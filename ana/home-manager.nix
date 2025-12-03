@@ -27,6 +27,7 @@
   home = {
     packages = with pkgs; [
       adwsteamgtk
+      ani-cli
       appimage-run
       audacious
       beyond-all-reason
@@ -49,20 +50,23 @@
       libresprite
       librewolf
       lutris
+      mangohud
       mindustry
       mumble
       nemo-with-extensions
+      nss
       openjdk17-bootstrap
       osu-lazer-bin
       pavucontrol
-      piper
       prismlauncher
       python312
+      qbittorrent
       rustup
       signal-desktop-bin
       tetrio-desktop
       vintagestory
       # warzone2100
+      xonotic
     ];
   };
   
