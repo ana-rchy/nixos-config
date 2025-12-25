@@ -12,7 +12,7 @@
       bindkey "^[[1;5D" backward-word
     '';
 
-    dotDir = ".config/zsh/";
+    dotDir = "/home/ana/.config/zsh/";
     
     shellAliases = {
       cd = "z";

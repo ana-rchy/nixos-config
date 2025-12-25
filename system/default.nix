@@ -22,6 +22,7 @@
     ./virt-manager.nix
     ./virtualbox.nix
     ./x11.nix
+    ./xdg.nix
     ./zsh.nix
   ];
   

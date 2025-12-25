@@ -17,7 +17,7 @@
     ./polybar.nix
     ./rofi/rofi.nix
     ./starship/starship.nix
-    ./xdg-dirs.nix
+    ./xdg.nix
     ./zsh.nix
   ];
 }
