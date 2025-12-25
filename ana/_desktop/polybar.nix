@@ -36,9 +36,8 @@ in
   };
   
   services.polybar.script = ''
-    killall polybar
-    
     polybar all &
+    
     polybar second-monitor &
   '';
 }

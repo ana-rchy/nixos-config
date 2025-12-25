@@ -4,5 +4,6 @@
     ./kitty.nix
     ./packages.nix
     ./polybar.nix
+    ./vr.nix
   ];
 }

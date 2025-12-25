@@ -31,6 +31,7 @@
       appimage-run
       audacious
       beyond-all-reason
+      bolt-launcher
       clamtk
       croc
       dotnet-sdk

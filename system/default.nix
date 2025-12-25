@@ -14,8 +14,10 @@
     ./lock-screen.nix
     ./logind.nix
     ./network.nix
+    ./opentabletdriver.nix
     ./packages.nix
     ./persistence-impermanence.nix
+    ./qmk.nix
     ./user.nix
     ./virt-manager.nix
     ./virtualbox.nix
