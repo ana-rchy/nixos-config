@@ -10,6 +10,7 @@
     # openvpn.servers = {
     #   meow = { config = '' config /home/ana/vpn.conf ''; };
     # };
+    udev.packages = with pkgs; [ via ];
   };
   
   programs = {
@@ -39,11 +40,13 @@
     tree
     unar
     unzip
+    via
     vim
     wget
     winetricks
     wineWowPackages.stable
     xclip
+    xorg.xinit
     zip
   ];
   
