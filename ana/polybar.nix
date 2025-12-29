@@ -14,6 +14,8 @@ in
       pulseSupport = true;
     };
     
+    script = "";
+    
     settings = {
       settings.pseudo-transparency = true;
 

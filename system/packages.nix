@@ -46,7 +46,6 @@
     winetricks
     wineWowPackages.stable
     xclip
-    xorg.xinit
     zip
   ];
   

@@ -34,10 +34,4 @@ in
       wm-restack = "bspwm";
     };
   };
-  
-  services.polybar.script = ''
-    polybar all &
-    
-    polybar second-monitor &
-  '';
 }

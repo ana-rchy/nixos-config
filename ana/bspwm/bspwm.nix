@@ -14,7 +14,6 @@
     
     startupPrograms = [
       "feh --bg-fill /etc/nixos/images/refuge_extended.png"
-      "polybar all"
       "picom"
     ];
   };

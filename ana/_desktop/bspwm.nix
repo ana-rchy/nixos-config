@@ -1,6 +1,13 @@
 {
-  xsession.windowManager.bspwm.monitors = {
-    DP-4 = [ "o" "n" "e" "s" "h" "o" "t" "n" "i" "k" "o" ];
-    DP-0 = [ "w​" "o​" "a​" "h​" ];
+  xsession.windowManager.bspwm = {
+    monitors = {
+      DP-4 = [ "o" "n" "e" "s" "h" "o" "t" "n" "i" "k" "o" ];
+      DP-0 = [ "w​" "o​" "a​" "h​" ];
+    };
+    
+    startupPrograms = [
+      "polybar all"
+      "polybar second-monitor"
+    ];
   };
 }
