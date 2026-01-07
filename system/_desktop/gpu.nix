@@ -1,7 +1,21 @@
+{ pkgs, ... }:
+
 {
-  hardware.graphics.enable = true;
-  hardware.nvidia.open = true;
+  hardware.graphics = {
+    enable = true;
+    
+    extraPackages = with pkgs; [
+      intel-media-driver
+      vpl-gpu-rt
+      
+      intel-compute-runtime
+    ];
+  };
   
-  services.xserver.videoDrivers = [ "nvidia" ];
-  boot.blacklistedKernelModules = [ "nouveau" ];
+  environment.sessionVariables = {
+    LIBVA_DRIVER_NAME = "iHD";
+  };
+  
+  
+  services.xserver.videoDrivers = [ "modesetting" ];
 }

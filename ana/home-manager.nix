@@ -6,7 +6,6 @@
     gh.enable = true;
     kitty.enable = true;
     mpv.enable = true;
-    nheko.enable = true;
     obs-studio = {
       enable = true;
       plugins = with pkgs; [
@@ -55,7 +54,6 @@
       mindustry
       mumble
       nemo-with-extensions
-      nss
       openjdk17-bootstrap
       osu-lazer-bin
       pavucontrol

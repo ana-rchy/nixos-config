@@ -2,6 +2,7 @@
   imports = [
     ./home-manager.nix
 
+    ./anki.nix
     ./bspwm/bspwm.nix
     ./celeste-olympus.nix
     ./fetch/fastfetch.nix
