@@ -5,14 +5,14 @@ in
 {
   services.polybar.settings = {
     "bar/all" = {
-      monitor = "DP-4";
+      monitor = "DP-2";
       
       modules-right = "tray pulseaudio";
       font = [ "Terminus:style=Bold:size=18;0" ];
     };
     
     "bar/second-monitor" = {
-      monitor = "DP-0";
+      monitor = "DP-3";
       
       font = [ "Terminus:style=Bold:size=18;0" ];
       

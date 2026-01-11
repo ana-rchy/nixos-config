@@ -3,6 +3,7 @@
 {
   hardware.graphics = {
     enable = true;
+    enable32Bit = true;
     
     extraPackages = with pkgs; [
       intel-media-driver
@@ -16,6 +17,9 @@
     LIBVA_DRIVER_NAME = "iHD";
   };
   
-  
   services.xserver.videoDrivers = [ "modesetting" ];
+  
+  boot.kernelParams = [ "module_blacklist=amdgpu" ];
 }
+
+
