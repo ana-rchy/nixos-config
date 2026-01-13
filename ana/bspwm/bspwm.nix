@@ -16,6 +16,7 @@
       "feh --bg-fill /etc/nixos/images/refuge_extended.png"
       "picom"
       "fcitx5 -d"
+      "flameshot"
     ];
   };
   

@@ -10,6 +10,7 @@
     ./gamemode.nix
     ./home-manager.nix
     ./input.nix
+    ./jellyfin.nix
     ./locale.nix
     ./lock-screen.nix
     ./logind.nix

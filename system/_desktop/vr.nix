@@ -14,4 +14,8 @@
     opencomposite
     wlx-overlay-s
   ];
+  
+  systemd.user.services.monado.environment = {
+    WMR_HANDTRACKING = "0";
+  };
 }
