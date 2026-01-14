@@ -226,8 +226,10 @@
     };
 
     lazy.plugins = {
-      "vim-sleuth" = {
-        package = pkgs.vimPlugins.vim-sleuth;
+      "indent-o-matic" = {
+        package = pkgs.vimPlugins.indent-o-matic;
+        
+        setupModule = "indent-o-matic";
       };
 
       "barbar.nvim" = {
@@ -335,5 +337,12 @@
       -- gets rid of padding between nvim window and the terminal border
       MiniMisc.setup_termbg_sync()
     '';
+    
+    # hack fix for auto-indentation in c# files
+    autocmds = [{
+      event = [ "BufEnter" ];
+      pattern = [ "*.cs" ];
+      command = "setlocal indentexpr=\"\"";
+    }];
   };
 }
