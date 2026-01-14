@@ -14,7 +14,7 @@
       csharp = {
         enable = true;
         lsp.enable = true;
-        lsp.servers = [ "csharp_ls" ];
+        lsp.servers = [ "omnisharp" ];
       };
       nix.enable = true;
       rust.enable = true;

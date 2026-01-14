@@ -49,6 +49,7 @@
       keepassxc
       libresprite
       librewolf
+      lmms
       lutris
       mangohud
       mindustry
