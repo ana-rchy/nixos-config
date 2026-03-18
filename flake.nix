@@ -24,45 +24,47 @@
     };
     
     nixpkgs-xr.url = "github:nix-community/nixpkgs-xr"; 
+    
+    hytale-launcher.url = "github:JPyke3/hytale-launcher-nix";
   };
 
-  outputs = { nixpkgs, impermanence, home-manager, nvf, nix-flatpak, hakurei, nixpkgs-xr, ... }: {
+  outputs = { nixpkgs, impermanence, home-manager, nvf, nix-flatpak, hakurei, nixpkgs-xr, hytale-launcher, ... }: {
     nixosConfigurations.PhoneWave = nixpkgs.lib.nixosSystem rec {
       system = "x86_64-linux";
 
       modules = [
         ./system
-	./system/_desktop
+        ./system/_desktop
 
-	./ana/user.nix
-	./ana/_desktop/user.nix
+        ./ana/user.nix
+        ./ana/_desktop/user.nix
 
-	impermanence.nixosModules.impermanence
-	
-	hakurei.nixosModules.hakurei
-	
-	nixpkgs-xr.nixosModules.nixpkgs-xr
-	
-	home-manager.nixosModules.home-manager {
+        impermanence.nixosModules.impermanence
+        
+        hakurei.nixosModules.hakurei
+        
+        nixpkgs-xr.nixosModules.nixpkgs-xr
+        
+        home-manager.nixosModules.home-manager {
           home-manager = {
-	    useGlobalPkgs = true;
-	    useUserPackages = true;
-	    users.ana.imports = [
+            useGlobalPkgs = true;
+            useUserPackages = true;
+            users.ana.imports = [
               ./ana
               ./ana/_desktop
-	      nvf.homeManagerModules.default
-	      nix-flatpak.homeManagerModules.nix-flatpak
-	    ];
-	  };
-	  
-	  # extraSpecialArgs = {
-	    ##
-	  # };
+              nvf.homeManagerModules.default
+              nix-flatpak.homeManagerModules.nix-flatpak
+            ];
+          };
+          
+          # extraSpecialArgs = {
+            ##
+          # };
         }
       ];
       
       specialArgs = {
-	##
+        inherit hytale-launcher;
       };
     };
 
@@ -71,37 +73,37 @@
 
       modules = [
         ./system
-	./system/_laptop
+        ./system/_laptop
 
         ./ana/user.nix
-	./ana/_laptop/user.nix
+        ./ana/_laptop/user.nix
 
-	impermanence.nixosModules.impermanence
-	
-	hakurei.nixosModules.hakurei
-	
-	nixpkgs-xr.nixosModules.nixpkgs-xr
+        impermanence.nixosModules.impermanence
+        
+        hakurei.nixosModules.hakurei
+        
+        nixpkgs-xr.nixosModules.nixpkgs-xr
 
-	home-manager.nixosModules.home-manager {
+        home-manager.nixosModules.home-manager {
           home-manager = {
-	    useGlobalPkgs = true;
+            useGlobalPkgs = true;
             useUserPackages = true;
-	    users.ana.imports = [
+            users.ana.imports = [
               ./ana
               ./ana/_laptop
-	      nvf.homeManagerModules.default
-	      nix-flatpak.homeManagerModules.nix-flatpak
-	    ];
+              nvf.homeManagerModules.default
+              nix-flatpak.homeManagerModules.nix-flatpak
+            ];
 	    
-	    extraSpecialArgs = {
-	      ##
-	    };
-	  };
-	}
+            # extraSpecialArgs = {
+              ##
+            # };
+          };
+        }
       ];
       
       specialArgs = {
-	##
+        inherit hytale-launcher;
       };
     };
     

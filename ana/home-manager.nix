@@ -35,7 +35,7 @@
       croc
       dotnet-sdk
       eog
-      equibop
+      equicord
       evolution
       file-roller
       firejail
@@ -50,6 +50,7 @@
       libresprite
       librewolf
       lmms
+      luanti
       lutris
       mangohud
       mindustry
@@ -61,12 +62,15 @@
       prismlauncher
       python312
       qbittorrent
+      ruffle
       rustup
+      ryubing
       signal-desktop-bin
       tetrio-desktop
       vintagestory
-      # warzone2100
+      warzone2100
       xonotic
+
     ];
   };
   

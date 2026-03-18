@@ -2,7 +2,7 @@
 
 {
   programs.anki = {
-    enable = true;
+    enable = false;
     
     addons = [
       pkgs.ankiAddons.anki-connect

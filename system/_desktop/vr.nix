@@ -12,7 +12,7 @@
 
   environment.systemPackages = with pkgs; [
     opencomposite
-    wlx-overlay-s
+    # wayvr
   ];
   
   systemd.user.services.monado.environment = {

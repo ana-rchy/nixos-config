@@ -3,7 +3,6 @@
     ./hardware-configuration.nix
 
     ./autorandr.nix
-    ./ckb-next.nix
     ./gpu.nix
     ./network.nix
     ./user.nix

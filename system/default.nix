@@ -9,6 +9,7 @@
     ./fonts.nix
     ./gamemode.nix
     ./home-manager.nix
+    ./i2p.nix
     ./input.nix
     ./jellyfin.nix
     ./locale.nix
@@ -18,6 +19,7 @@
     ./opentabletdriver.nix
     ./packages.nix
     ./persistence-impermanence.nix
+    ./postgresql.nix
     ./qmk.nix
     ./user.nix
     ./virt-manager.nix

@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, hytale-launcher, ... }:
 
 {
   nixpkgs.config.pulseaudio = true;
@@ -10,6 +10,8 @@
     # openvpn.servers = {
     #   meow = { config = '' config /home/ana/vpn.conf ''; };
     # };
+    
+    zerotierone.enable = true;
   };
   
   programs = {
@@ -37,9 +39,11 @@
     vim
     wget
     winetricks
-    wineWowPackages.stable
+    wine-staging
     xclip
     zip
+
+    hytale-launcher.packages.x86_64-linux.default
   ];
   
   # unfree
