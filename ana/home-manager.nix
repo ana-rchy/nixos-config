@@ -33,19 +33,20 @@
       bolt-launcher
       clamtk
       croc
+      crosspipe
       dotnet-sdk
       eog
-      equicord
+      equibop
       evolution
       file-roller
       firejail
       foliate
       gcc
+      gImageReader
       gimp
       gnome-tetravex
       gnumake
       godot-mono
-      helvum
       keepassxc
       libresprite
       librewolf
@@ -65,7 +66,7 @@
       ruffle
       rustup
       ryubing
-      signal-desktop-bin
+      signal-desktop
       tetrio-desktop
       vintagestory
       warzone2100

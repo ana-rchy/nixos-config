@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  programs.light.enable = true;
+  hardware.acpilight.enable = true;
   
   # let all users write to brightness file
   services.udev.extraRules = ''
