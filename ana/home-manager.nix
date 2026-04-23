@@ -31,7 +31,6 @@
       audacious
       beyond-all-reason
       bolt-launcher
-      clamtk
       croc
       crosspipe
       dotnet-sdk
@@ -47,13 +46,16 @@
       gnome-tetravex
       gnumake
       godot-mono
+      heroic
       keepassxc
       libresprite
       librewolf
       lmms
       luanti
       lutris
+      magic-wormhole
       mangohud
+      memento
       mindustry
       mumble
       nemo-with-extensions
@@ -71,7 +73,6 @@
       vintagestory
       warzone2100
       xonotic
-
     ];
   };
   
