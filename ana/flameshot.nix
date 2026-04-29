@@ -5,7 +5,7 @@
     settings = {
       General = {
         savePath = "/home/ana/sitelen/ilo/";
-	savePathFixed = true;
+        savePathFixed = true;
       };
     };
   };

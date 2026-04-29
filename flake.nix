@@ -1,6 +1,7 @@
 {
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs-stable.url = "github:nixos/nixpkgs/release-25.11";
     
     impermanence.url = "github:nix-community/impermanence";
     
@@ -18,20 +19,15 @@
       url = "github:gmodena/nix-flatpak/?ref=latest";
     };
     
-    hakurei = {
-      url = "git+https://git.gensokyo.uk/security/hakurei";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    
     nixpkgs-xr.url = "github:nix-community/nixpkgs-xr"; 
-    
-    hytale-launcher.url = "github:JPyke3/hytale-launcher-nix";
   };
 
-  outputs = { nixpkgs, impermanence, home-manager, nvf, nix-flatpak, hakurei, nixpkgs-xr, hytale-launcher, ... }: {
+  outputs = { nixpkgs, nixpkgs-stable, impermanence, home-manager, nvf, nix-flatpak, nixpkgs-xr, ... } @ inputs: {
     nixosConfigurations.PhoneWave = nixpkgs.lib.nixosSystem rec {
       system = "x86_64-linux";
 
+      specialArgs = { inherit inputs; };
+      
       modules = [
         ./system
         ./system/_desktop
@@ -40,8 +36,6 @@
         ./ana/_desktop/user.nix
 
         impermanence.nixosModules.impermanence
-        
-        hakurei.nixosModules.hakurei
         
         nixpkgs-xr.nixosModules.nixpkgs-xr
         
@@ -57,20 +51,17 @@
             ];
           };
           
-          # extraSpecialArgs = {
-            ##
-          # };
+          extraSpecialArgs = {
+          };
         }
       ];
-      
-      specialArgs = {
-        inherit hytale-launcher;
-      };
     };
 
     nixosConfigurations.carbomb = nixpkgs.lib.nixosSystem rec {
       system = "x86_64-linux";
-
+      
+      specialArgs = { inherit inputs; };
+      
       modules = [
         ./system
         ./system/_laptop
@@ -79,8 +70,6 @@
         ./ana/_laptop/user.nix
 
         impermanence.nixosModules.impermanence
-        
-        hakurei.nixosModules.hakurei
         
         nixpkgs-xr.nixosModules.nixpkgs-xr
 
@@ -95,16 +84,11 @@
               nix-flatpak.homeManagerModules.nix-flatpak
             ];
 	    
-            # extraSpecialArgs = {
-              ##
-            # };
+            extraSpecialArgs = {
+            };
           };
         }
       ];
-      
-      specialArgs = {
-        inherit hytale-launcher;
-      };
     };
     
   };

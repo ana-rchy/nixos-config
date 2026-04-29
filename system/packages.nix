@@ -1,4 +1,4 @@
-{ pkgs, hytale-launcher, ... }:
+{ inputs, config, pkgs, pkgs-stable, ... }:
 
 {
   nixpkgs.config.pulseaudio = true;
@@ -24,6 +24,12 @@
     enableOnBoot = false;
   };
 
+  # HACK: needed to use nixpkgs-stable which is needed for older version of flameshot
+  _module.args.pkgs-stable = import inputs.nixpkgs-stable {
+    inherit (pkgs.stdenv.hostPlatform) system;
+    inherit (config.nixpkgs) config;
+  };
+
   environment.systemPackages = with pkgs; [
     bash
     btop
@@ -43,7 +49,7 @@
     xclip
     zip
 
-    hytale-launcher.packages.x86_64-linux.default
+    pkgs-stable.flameshot
   ];
   
   # unfree

@@ -5,9 +5,10 @@
     ./anki.nix
     ./bspwm/bspwm.nix
     ./celeste-olympus.nix
+    ./dotnet.nix
     ./fetch/fastfetch.nix
     ./fcitx.nix
-    ./flameshot.nix
+    # ./flameshot.nix    # HACK fix while latest flameshot is fucked
     ./flatpak.nix
     ./git.nix
     ./gtk-qt.nix

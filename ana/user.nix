@@ -3,7 +3,7 @@
 {
   users.users.ana = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "docker" "gamemode" ];
+    extraGroups = [ "wheel" "docker" "gamemode" "video" ];
 
     shell = pkgs.zsh;
   };
