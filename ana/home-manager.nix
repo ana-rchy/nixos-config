@@ -62,6 +62,7 @@
       pavucontrol
       prismlauncher
       python312
+      python312Packages.manga-ocr
       qbittorrent
       ruffle
       rustdesk-flutter

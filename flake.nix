@@ -51,8 +51,8 @@
             ];
           };
           
-          extraSpecialArgs = {
-          };
+          # extraSpecialArgs = {
+          # };
         }
       ];
     };
@@ -84,8 +84,8 @@
               nix-flatpak.homeManagerModules.nix-flatpak
             ];
 	    
-            extraSpecialArgs = {
-            };
+            # extraSpecialArgs = {
+            # };
           };
         }
       ];
