@@ -8,7 +8,6 @@
     extraPackages = with pkgs; [
       intel-media-driver
       vpl-gpu-rt
-      
       intel-compute-runtime
     ];
   };
@@ -17,9 +16,21 @@
     LIBVA_DRIVER_NAME = "iHD";
   };
   
-  services.xserver.videoDrivers = [ "modesetting" ];
+  services.xserver.videoDrivers = [ "modesetting"  ];
   
-  boot.kernelParams = [ "module_blacklist=amdgpu" ];
+  hardware.nvidia = {
+    open = true;
+    # modesetting = true;
+    
+    # prime = {
+    #   offload.enable = true;
+    #   offload.enableOffloadCmd = true;
+    #
+    #   # amdgpuBusId = "PCI:82@0:0:0";
+    #   intelBusId = "PCI:3@0:0:0";
+    #   nvidiaBusId = "PCI:5@0:0:0";
+    # };
+  };
 }
 
 
