@@ -44,8 +44,8 @@
     via
     vim
     wget
+    wine64Packages.stagingFull
     winetricks
-    wine-staging
     xclip
     zip
 
