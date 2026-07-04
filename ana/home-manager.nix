@@ -57,6 +57,8 @@
       mindustry
       mumble
       nemo-with-extensions
+      nim
+      odin
       openjdk17-bootstrap
       osu-lazer-bin
       pavucontrol

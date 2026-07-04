@@ -16,7 +16,9 @@
         lsp.enable = true;
         lsp.servers = [ "omnisharp" ];
       };
+      nim.enable = true;
       nix.enable = true;
+      odin.enable = true;
       rust.enable = true;
     };
     
