@@ -30,12 +30,10 @@
       appimage-run
       audacious
       beyond-all-reason
-      bolt-launcher
       croc
       crosspipe
       eog
       equibop
-      evolution
       file-roller
       firejail
       foliate
@@ -51,10 +49,11 @@
       librewolf
       lmms
       luanti
+      lutris
       magic-wormhole
       mangohud
       memento
-      mindustry
+      # mindustry
       mumble
       nemo-with-extensions
       nim
@@ -64,34 +63,33 @@
       pavucontrol
       prismlauncher
       python312
-      python312Packages.manga-ocr
+      # python312Packages.manga-ocr
       qbittorrent
       ruffle
       rustdesk-flutter
       rustup
-      ryubing
       signal-desktop
       tetrio-desktop
-      vintagestory
-      warzone2100
+      # vintagestory
+      # warzone2100
       xonotic
       
       # lutris hack fix
-      (pkgs.lutris.override {
-        # Intercept buildFHSEnv to modify target packages
-        buildFHSEnv = args: pkgs.buildFHSEnv (args // {
-          multiPkgs = envPkgs:
-            let
-              # Fetch original package list
-              originalPkgs = args.multiPkgs envPkgs;
-
-              # Disable tests for openldap
-              customLdap = envPkgs.openldap.overrideAttrs (_: { doCheck = false; });
-            in
-            # Replace broken openldap with the custom one
-            builtins.filter (p: (p.pname or "") != "openldap") originalPkgs ++ [ customLdap ];
-        });
-      })
+      # (pkgs.lutris.override {
+      #   # Intercept buildFHSEnv to modify target packages
+      #   buildFHSEnv = args: pkgs.buildFHSEnv (args // {
+      #     multiPkgs = envPkgs:
+      #       let
+      #         # Fetch original package list
+      #         originalPkgs = args.multiPkgs envPkgs;
+      #
+      #         # Disable tests for openldap
+      #         customLdap = envPkgs.openldap.overrideAttrs (_: { doCheck = false; });
+      #       in
+      #       # Replace broken openldap with the custom one
+      #       builtins.filter (p: (p.pname or "") != "openldap") originalPkgs ++ [ customLdap ];
+      #   });
+      # })
     ];
   };
   

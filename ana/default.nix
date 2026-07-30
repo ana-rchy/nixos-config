@@ -2,13 +2,12 @@
   imports = [
     ./home-manager.nix
 
-    ./anki.nix
     ./bspwm/bspwm.nix
     ./celeste-olympus.nix
     ./dotnet.nix
     ./fetch/fastfetch.nix
     ./fcitx.nix
-    # ./flameshot.nix    # HACK fix while latest flameshot is fucked
+    ./flameshot.nix
     ./flatpak.nix
     ./git.nix
     ./gtk-qt.nix

@@ -1,7 +1,6 @@
 {
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    nixpkgs-stable.url = "github:nixos/nixpkgs/release-25.11";
     
     impermanence.url = "github:nix-community/impermanence";
     
@@ -22,7 +21,7 @@
     nixpkgs-xr.url = "github:nix-community/nixpkgs-xr"; 
   };
 
-  outputs = { nixpkgs, nixpkgs-stable, impermanence, home-manager, nvf, nix-flatpak, nixpkgs-xr, ... } @ inputs: {
+  outputs = { nixpkgs, impermanence, home-manager, nvf, nix-flatpak, nixpkgs-xr, ... } @ inputs: {
     nixosConfigurations.PhoneWave = nixpkgs.lib.nixosSystem rec {
       system = "x86_64-linux";
 
@@ -71,8 +70,6 @@
 
         impermanence.nixosModules.impermanence
         
-        nixpkgs-xr.nixosModules.nixpkgs-xr
-
         home-manager.nixosModules.home-manager {
           home-manager = {
             useGlobalPkgs = true;

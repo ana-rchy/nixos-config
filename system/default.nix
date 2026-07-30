@@ -9,21 +9,19 @@
     ./fonts.nix
     ./gamemode.nix
     ./home-manager.nix
-    ./i2p.nix
+    # ./i2p.nix
     ./input.nix
-    ./jellyfin.nix
+    # ./jellyfin.nix
     ./locale.nix
-    ./lock-screen.nix
+    # ./lock-screen.nix  # need to figure out how to make this work
     ./logind.nix
     ./network.nix
     ./opentabletdriver.nix
     ./packages.nix
     ./persistence-impermanence.nix
-    ./postgresql.nix
     ./qmk.nix
     ./user.nix
     ./virt-manager.nix
-    ./virtualbox.nix
     ./x11.nix
     ./xdg.nix
     ./zsh.nix

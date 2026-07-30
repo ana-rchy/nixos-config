@@ -6,7 +6,8 @@
     ./gpu.nix
     ./network.nix
     ./user.nix
-    ./vr.nix
+    # ./vfio.nix
+    # ./vr.nix
   ];
 
   system.stateVersion = "25.11";
