@@ -36,6 +36,7 @@
       equibop
       file-roller
       firejail
+      fluffychat
       foliate
       gcc
       gImageReader
@@ -70,6 +71,7 @@
       rustup
       signal-desktop
       tetrio-desktop
+      tor-browser
       # vintagestory
       # warzone2100
       xonotic

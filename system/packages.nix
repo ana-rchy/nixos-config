@@ -4,6 +4,7 @@
   services = {
     xserver.windowManager.bspwm.enable = true;
     flatpak.enable = true;
+    mullvad-vpn.enable = true;
     ratbagd.enable = true;
     
     zerotierone.enable = true;
@@ -11,6 +12,8 @@
   
   programs = {
     dconf.enable = true; # needed for setting gtk theme
+
+    gnupg.agent.enable = true;
   };
   
   virtualisation.docker = {
