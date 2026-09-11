@@ -4,7 +4,7 @@
     
     settings = {
       user = {
-        email = "dicks@inmy.ass";
+        email = "ana@rchy.gay";
         name = "ana_rchy";
       };
       

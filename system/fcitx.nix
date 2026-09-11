@@ -1,11 +1,11 @@
 { pkgs, ... }:
 
 {
-  programs.zsh.envExtra = ''
-    GTK_IM_MODULE="fcitx"
-    QT_IM_MODULE="fcitx"
-    SDL_IM_MODULE="fcitx"
-    XMODIFIERS="@im=fcitx"
+  programs.zsh.shellInit = ''
+    export GTK_IM_MODULE="fcitx"
+    export QT_IM_MODULE="fcitx"
+    export SDL_IM_MODULE="fcitx"
+    export XMODIFIERS="@im=fcitx"
   '';
   
   i18n.inputMethod = {

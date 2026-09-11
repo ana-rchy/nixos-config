@@ -1,12 +1,8 @@
 {
   imports = [
-    ./home-manager.nix
-
     ./bspwm/bspwm.nix
     ./celeste-olympus.nix
-    ./dotnet.nix
     ./fetch/fastfetch.nix
-    ./fcitx.nix
     ./flameshot.nix
     ./flatpak.nix
     ./git.nix
@@ -18,7 +14,7 @@
     ./polybar.nix
     ./rofi/rofi.nix
     ./starship/starship.nix
+    ./syncthing.nix
     ./xdg.nix
-    ./zsh.nix
   ];
 }

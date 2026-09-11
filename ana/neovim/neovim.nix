@@ -1,9 +1,13 @@
 { pkgs, lib, ... }:
 
 {
-  programs.neovim.enable = true;
-  programs.nvf.enable = true;
+  programs.neovim = {
+    enable = true;
+    withRuby = false;
+    withPython3 = false;
+  };
 
+  programs.nvf.enable = true;
   programs.nvf.settings.vim = {
     languages = {
       enableTreesitter = true;
@@ -130,7 +134,7 @@
       lualine = {
         enable = true;
 
-        refresh.statusline = 100;
+        setupOpts.options.refresh.statusline = 100;
 
         setupOpts.options.theme = {
           normal.a = {

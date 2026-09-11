@@ -1,12 +1,6 @@
 { pkgs, ... }:
 
 {
-  home = {
-    packages = with pkgs; [
-      olympus
-    ];
-  };
-  
   xdg.desktopEntries."Celeste" = {
     name = "Celeste";
     icon = "Celeste";

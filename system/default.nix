@@ -5,6 +5,7 @@
     ./boot.nix
     ./clamav.nix
     ./display-manager.nix
+    ./fcitx.nix
     ./firewall.nix
     ./fonts.nix
     ./gamemode.nix
@@ -13,7 +14,7 @@
     ./input.nix
     # ./jellyfin.nix
     ./locale.nix
-    # ./lock-screen.nix  # need to figure out how to make this work
+    # ./lock-screen.nix  # TODO: need to figure out how to make this work
     ./logind.nix
     ./network.nix
     ./opentabletdriver.nix
